@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DTOApplication id="Application-1959273054-1055008340" ApplicationNumber="QT-00001560" Version="3.10" CustomerRef="7041" Status="In Process" TypeCd="Quote" LockTaskId="QuoteTask2001" Description="New Quote" SystemId="2487" ReadyToRateInd="Yes">
+    <QuestionReplies id="QuestionReplies-1639316018-242732984" QuestionSourceMDA="CustUWProduct::product-master::topa-CA-CommercialExcess-v01-00-01:://ProductSetup[@id='ProductSetup']">
+        <QuestionReply id="QuestionReply-470056972-1260675178" Name="XAI060" Value="NO" VisibleInd="Yes"/>
+        <QuestionReply id="QuestionReply-1341594559-608569666" Name="XAI061" Value="YES" VisibleInd="Yes"/>
+    </QuestionReplies>
+    <ValidationError id="ValidationError-1245831475-1642569638" TypeCd="Validation-Addr-1020666078-1353799847" Msg="Please double check to make sure that [primary business operation] address is correct - " SubTypeCd="WARNING" PermanentInd="Yes" Link="&lt;a class='actionLink' href=javascript:prepareReplyXml();cmmXFormSafe('UWApplicationSync','2487','Line-1240186931-426901313','Line-1240186931-426901313','CodeRefOptionsKey=application-product&amp;TabOption=Policy&amp;ShowRequiredFieldsInd=Yes&amp;HighlightFields=InsuredPrimaryBusAddr.Addr1')&gt;Go There Now&lt;/a&gt;"/>
+    <DTOLine id="Line-1240186931-426901313" StatusCd="Active" LineCd="CommercialExcess" FullTermAmt="14476" RatingService="DRC" WrittenPremiumAmt="14476" EarnedAmt="0.00" CommissionAmt="0.00" FinalPremiumAmt="14476" TransactionCommissionAmt="2533.32" LiabilityVehicleDesignationCd="1" MedPayVehicleDesignationCd="1" UMBIVehicleDesignationCd="1" ComprehensiveVehicleDesignationCd="1" CollisionVehicleDesignationCd="1" IRPM="0.00" ReInsOneCovD="100%" ReInsOneCovF="100%" ReInsOneCovE="100%" ReInsOneTIV="0" TotalSubcontractor="1231" PersonalLiabilityLimit="7000000" TotalSalesReceipts="21312" PayrollOperations="1323" LimitedTerrorismCoverage="No">
+        <DTOCoverage id="Coverage-1398959630-2004937081" Status="Active" CoverageCd="CEL" FullTermAmt="14476" WrittenPremiumAmt="14476" FinalPremiumAmt="14476" EarnedAmt="0.00" CommissionPct="17.50" ContributionPct="0.00" CommissionAmt="0.00" TransactionCommissionAmt="2533.32" Description="Excess Coverage" CoinsurancePct="0">
+            <DTOLimit id="Limit-1730124278-659396869" LimitCd="Limit1" Value="7000000"/>
+            <DTOSteps>
+                <DTOStep Order="1" Name="Rate Area: 1M NonAuto" Desc="1M NonAuto Layer Premium" Operation="+" Factor="7277" Value="7277"/>
+                <DTOStep Order="2" Name="Rate Area: 2M NonAuto" Desc="2M NonAuto Layer Premium" Operation="+" Factor="2674" Value="2674"/>
+                <DTOStep Order="3" Name="Rate Area: 3M NonAuto" Desc="3M NonAuto Layer Premium" Operation="+" Factor="1528" Value="1528"/>
+                <DTOStep Order="4" Name="Rate Area: 4M NonAuto" Desc="4M NonAuto Layer Premium" Operation="+" Factor="917" Value="917"/>
+                <DTOStep Order="5" Name="Rate Area: 5M NonAuto" Desc="5M NonAuto Layer Premium" Operation="+" Factor="750" Value="750"/>
+                <DTOStep Order="6" Name="Rate Area: 6M NonAuto" Desc="6M NonAuto Layer Premium" Operation="+" Factor="665" Value="665"/>
+                <DTOStep Order="7" Name="Rate Area: 7M NonAuto" Desc="7M NonAuto Layer Premium" Operation="+" Factor="665" Value="665"/>
+            </DTOSteps>
+            <DTORateArea AreaName="1M NonAuto" Description="1M NonAuto Layer" FullTermAmt="7277" FinalPremiumAmt="7277" WrittenPremiumAmt="7277">
+                <DTOSteps>
+                    <DTOStep Order="1" Name="1M Premium" Desc="1M Final Premium" Operation="=" Factor="7277" Value="7277"/>
+                    <DTOStep Order="2" Name="Final Layer Factor" Desc="Final Layer Factor" Operation="x" Factor="1" Value="7277"/>
+                    <DTOStep Order="3" Name="Layer Minimum" Desc="1M Layer Minimum" Operation="" Factor="1500" Value=""/>
+                    <DTOStep Order="4" Name="Balance To Minimum" Desc="Balance To Layer Minimum" Operation="+" Factor="0" Value="7277"/>
+                    <DTOStep Order="5" Name="NonAuto Ratio Factor" Desc="NonAuto Ratio Factor" Operation="x" Factor="1" Value="7277"/>
+                </DTOSteps>
+            </DTORateArea>
+            <DTORateArea AreaName="2M NonAuto" Description="2M NonAuto Layer" FullTermAmt="2674" FinalPremiumAmt="2674" WrittenPremiumAmt="2674">
+                <DTOSteps>
+                    <DTOStep Order="1" Name="1M Premium" Desc="1M Final Premium" Operation="=" Factor="7277" Value="7277"/>
+                    <DTOStep Order="2" Name="Final Layer Factor" Desc="Final Layer Factor" Operation="x" Factor="0.3675" Value="2674">
+                        <DTOSteps>
+                            <DTOStep Order="1" Name="Default Layer Factor" Desc="Default Layer Factor" Operation="" Factor="0.3675" Value=""/>
+                            <DTOStep Order="2" Name="Layer Modification Factor" Desc="Layer Modification Factor" Operation="x" Factor="1" Value="0.368"/>
+                            <DTOStep Order="3" Name="Min Layer Factor" Desc="Min Layer Factor" Operation="" Factor="0.35" Value=""/>
+                            <DTOStep Order="4" Name="Max Layer Factor" Desc="Max Layer Factor" Operation="" Factor="0.65" Value=""/>
+                            <DTOStep Order="5" Name="Revised Layer Factor" Desc="Revised Layer Factor" Operation="=" Factor="0.3675" Value="0.3675"/>
+                        </DTOSteps>
+                    </DTOStep>
+                    <DTOStep Order="3" Name="Layer Minimum" Desc="2M Layer Minimum" Operation="" Factor="1000" Value=""/>
+                    <DTOStep Order="4" Name="Balance To Minimum" Desc="Balance To Layer Minimum" Operation="+" Factor="0" Value="2674"/>
+                    <DTOStep Order="5" Name="NonAuto Ratio Factor" Desc="NonAuto Ratio Factor" Operation="x" Factor="1" Value="2674"/>
+                </DTOSteps>
+            </DTORateArea>
+            <DTORateArea AreaName="3M NonAuto" Description="3M NonAuto Layer" FullTermAmt="1528" FinalPremiumAmt="1528" WrittenPremiumAmt="1528">
+                <DTOSteps>
+                    <DTOStep Order="1" Name="1M Premium" Desc="1M Final Premium" Operation="=" Factor="7277" Value="7277"/>
+                    <DTOStep Order="2" Name="Final Layer Factor" Desc="Final Layer Factor" Operation="x" Factor="0.21" Value="1528">
+                        <DTOSteps>
+                            <DTOStep Order="1" Name="Default Layer Factor" Desc="Default Layer Factor" Operation="" Factor="0.21" Value=""/>
+                            <DTOStep Order="2" Name="Layer Modification Factor" Desc="Layer Modification Factor" Operation="x" Factor="1" Value="0.21"/>
+                            <DTOStep Order="3" Name="Min Layer Factor" Desc="Min Layer Factor" Operation="" Factor="0.2" Value=""/>
+                            <DTOStep Order="4" Name="Max Layer Factor" Desc="Max Layer Factor" Operation="" Factor="0.4" Value=""/>
+                            <DTOStep Order="5" Name="Revised Layer Factor" Desc="Revised Layer Factor" Operation="=" Factor="0.21" Value="0.21"/>
+                        </DTOSteps>
+                    </DTOStep>
+                    <DTOStep Order="3" Name="Layer Minimum" Desc="3M Layer Minimum" Operation="" Factor="900" Value=""/>
+                    <DTOStep Order="4" Name="Balance To Minimum" Desc="Balance To Layer Minimum" Operation="+" Factor="0" Value="1528"/>
+                    <DTOStep Order="5" Name="NonAuto Ratio Factor" Desc="NonAuto Ratio Factor" Operation="x" Factor="1" Value="1528"/>
+                </DTOSteps>
+            </DTORateArea>
+            <DTORateArea AreaName="4M NonAuto" Description="4M NonAuto Layer" FullTermAmt="917" FinalPremiumAmt="917" WrittenPremiumAmt="917">
+                <DTOSteps>
+                    <DTOStep Order="1" Name="1M Premium" Desc="1M Final Premium" Operation="=" Factor="7277" Value="7277"/>
+                    <DTOStep Order="2" Name="Final Layer Factor" Desc="Final Layer Factor" Operation="x" Factor="0.126" Value="917">
+                        <DTOSteps>
+                            <DTOStep Order="1" Name="Default Layer Factor" Desc="Default Layer Factor" Operation="" Factor="0.126" Value=""/>
+                            <DTOStep Order="2" Name="Layer Modification Factor" Desc="Layer Modification Factor" Operation="x" Factor="1" Value="0.126"/>
+                            <DTOStep Order="3" Name="Min Layer Factor" Desc="Min Layer Factor" Operation="" Factor="0.12" Value=""/>
+                            <DTOStep Order="4" Name="Max Layer Factor" Desc="Max Layer Factor" Operation="" Factor="0.25" Value=""/>
+                            <DTOStep Order="5" Name="Revised Layer Factor" Desc="Revised Layer Factor" Operation="=" Factor="0.126" Value="0.126"/>
+                        </DTOSteps>
+                    </DTOStep>
+                    <DTOStep Order="3" Name="Layer Minimum" Desc="4M Layer Minimum" Operation="" Factor="850" Value=""/>
+                    <DTOStep Order="4" Name="Balance To Minimum" Desc="Balance To Layer Minimum" Operation="+" Factor="0" Value="917"/>
+                    <DTOStep Order="5" Name="NonAuto Ratio Factor" Desc="NonAuto Ratio Factor" Operation="x" Factor="1" Value="917"/>
+                </DTOSteps>
+            </DTORateArea>
+            <DTORateArea AreaName="5M NonAuto" Description="5M NonAuto Layer" FullTermAmt="750" FinalPremiumAmt="750" WrittenPremiumAmt="750">
+                <DTOSteps>
+                    <DTOStep Order="1" Name="1M Premium" Desc="1M Final Premium" Operation="=" Factor="7277" Value="7277"/>
+                    <DTOStep Order="2" Name="Final Layer Factor" Desc="Final Layer Factor" Operation="x" Factor="0.0735" Value="535">
+                        <DTOSteps>
+                            <DTOStep Order="1" Name="Default Layer Factor" Desc="Default Layer Factor" Operation="" Factor="0.0735" Value=""/>
+                            <DTOStep Order="2" Name="Layer Modification Factor" Desc="Layer Modification Factor" Operation="x" Factor="1" Value="0.074"/>
+                            <DTOStep Order="3" Name="Min Layer Factor" Desc="Min Layer Factor" Operation="" Factor="0.07" Value=""/>
+                            <DTOStep Order="4" Name="Max Layer Factor" Desc="Max Layer Factor" Operation="" Factor="0.15" Value=""/>
+                            <DTOStep Order="5" Name="Revised Layer Factor" Desc="Revised Layer Factor" Operation="=" Factor="0.0735" Value="0.0735"/>
+                        </DTOSteps>
+                    </DTOStep>
+                    <DTOStep Order="3" Name="Layer Minimum" Desc="5M Layer Minimum" Operation="" Factor="750" Value=""/>
+                    <DTOStep Order="4" Name="Balance To Minimum" Desc="Balance To Layer Minimum" Operation="+" Factor="215" Value="750"/>
+                    <DTOStep Order="5" Name="NonAuto Ratio Factor" Desc="NonAuto Ratio Factor" Operation="x" Factor="1" Value="750"/>
+                </DTOSteps>
+            </DTORateArea>
+            <DTORateArea AreaName="6M NonAuto" Description="6M NonAuto Layer" FullTermAmt="665" FinalPremiumAmt="665" WrittenPremiumAmt="665">
+                <DTOSteps>
+                    <DTOStep Order="1" Name="1M Premium" Desc="1M Final Premium" Operation="=" Factor="7277" Value="7277"/>
+                    <DTOStep Order="2" Name="Final Layer Factor" Desc="Final Layer Factor" Operation="x" Factor="0.09135" Value="665">
+                        <DTOSteps>
+                            <DTOStep Order="1" Name="Default Layer Factor" Desc="Default Layer Factor" Operation="" Factor="0.09135" Value=""/>
+                            <DTOStep Order="2" Name="Layer Modification Factor" Desc="Layer Modification Factor" Operation="x" Factor="1" Value="0.091"/>
+                            <DTOStep Order="3" Name="Min Layer Factor" Desc="Min Layer Factor" Operation="" Factor="0.095" Value=""/>
+                            <DTOStep Order="4" Name="Max Layer Factor" Desc="Max Layer Factor" Operation="" Factor="0.133" Value=""/>
+                            <DTOStep Order="5" Name="Revised Layer Factor" Desc="Revised Layer Factor" Operation="=" Factor="0.09135" Value="0.09135"/>
+                        </DTOSteps>
+                    </DTOStep>
+                    <DTOStep Order="3" Name="Layer Minimum" Desc="6M Layer Minimum" Operation="" Factor="500" Value=""/>
+                    <DTOStep Order="4" Name="Balance To Minimum" Desc="Balance To Layer Minimum" Operation="+" Factor="0" Value="665"/>
+                    <DTOStep Order="5" Name="NonAuto Ratio Factor" Desc="NonAuto Ratio Factor" Operation="x" Factor="1" Value="665"/>
+                </DTOSteps>
+            </DTORateArea>
+            <DTORateArea AreaName="7M NonAuto" Description="7M NonAuto Layer" FullTermAmt="665" FinalPremiumAmt="665" WrittenPremiumAmt="665">
+                <DTOSteps>
+                    <DTOStep Order="1" Name="1M Premium" Desc="1M Final Premium" Operation="=" Factor="7277" Value="7277"/>
+                    <DTOStep Order="2" Name="Final Layer Factor" Desc="Final Layer Factor" Operation="x" Factor="0.09135" Value="665">
+                        <DTOSteps>
+                            <DTOStep Order="1" Name="Default Layer Factor" Desc="Default Layer Factor" Operation="" Factor="0.09135" Value=""/>
+                            <DTOStep Order="2" Name="Layer Modification Factor" Desc="Layer Modification Factor" Operation="x" Factor="1" Value="0.091"/>
+                            <DTOStep Order="3" Name="Min Layer Factor" Desc="Min Layer Factor" Operation="" Factor="0.095" Value=""/>
+                            <DTOStep Order="4" Name="Max Layer Factor" Desc="Max Layer Factor" Operation="" Factor="0.133" Value=""/>
+                            <DTOStep Order="5" Name="Revised Layer Factor" Desc="Revised Layer Factor" Operation="=" Factor="0.09135" Value="0.09135"/>
+                        </DTOSteps>
+                    </DTOStep>
+                    <DTOStep Order="3" Name="Layer Minimum" Desc="7M Layer Minimum" Operation="" Factor="500" Value=""/>
+                    <DTOStep Order="4" Name="Balance To Minimum" Desc="Balance To Layer Minimum" Operation="+" Factor="0" Value="665"/>
+                    <DTOStep Order="5" Name="NonAuto Ratio Factor" Desc="NonAuto Ratio Factor" Operation="x" Factor="1" Value="665"/>
+                </DTOSteps>
+            </DTORateArea>
+        </DTOCoverage>
+        <DTORisk id="Risk-621096213-981935446" TypeCd="General/Business Liability" LocationRef="Location-718978891-1519734569" FullTermAmt="0.00" FinalPremiumAmt="0.00" WrittenPremiumAmt="0.00" CommissionAmt="0.00" Status="Active" RiskBeanName="GLClass" RiskAddDt="20210909" RiskAddPolicyVersion="1" RiskAddTransactionNo="CurrentTransaction" ExposureTypeCd="Other">
+            <DTOBuilding id="Building-1937373474-115251092">
+                <Addr id="Addr-171929567-152131163" AddrTypeCd="RiskAddr" Addr1="Smith Ranch Road" Addr2="gg" City="San Rafael" StateProvCd="CA" PostalCode="94903" RegionCd="United States" RegionISOCd="US"/>
+                <Addr id="Addr-899489458-1200446882" AddrTypeCd="RiskLookupAddr" Addr1="Smith Ranch Road" Addr2="gg" City="San Rafael" StateProvCd="CA" PostalCode="94903" RegionCd="United States" RegionISOCd="US"/>
+            </DTOBuilding>
+            <DTOGLClass id="GLClass-910005019-899528713" ExposureNumber="1" Status="Active" GLClassCode="45334" ExposureBasis="Area" Exposure="1254" PrimaryOperation="Yes" Description="Insurance Agents" ExposureCounterNumber="1" Industry="Retail/Service" SubIndustry="Office" ClassEligibility="Acceptable" ProductsIncluded="yes">
+                <Addr id="Addr-1755863174-1164277884" AddrTypeCd="ExposureAddr" RegionCd="United States" RegionISOCd="US"/>
+            </DTOGLClass>
+            <DTOVehicle id="Vehicle-521834112-1201610906">
+                <Addr id="Addr-1842953351-59842520" AddrTypeCd="VehicleGarageAddr" City="San Rafael" StateProvCd="CA" PostalCode="94903"/>
+            </DTOVehicle>
+        </DTORisk>
+    </DTOLine>
+    <DTOLocation id="Location-228247482-907930315" LocationNumber="1" Status="Active" LocationDesc="Property Location" LocationCounterNumber="1">
+        <DTOLocationDetail id="LocationDetail-1355460229-558159569" DetailTypeCd="ProtectionClassLocationDetail"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-379795413-1211601286" RiskGroupCd="ReinsuranceGroup"/>
+        <Addr id="Addr-568352355-939337449" AddrTypeCd="LocationAddr" Addr1="Smith Ranch Road" Addr2="gg" City="San Rafael" StateProvCd="CA" PostalCode="94903" RegionCd="United States" RegionISOCd="US"/>
+        <Addr id="Addr-1812037819-898851906" AddrTypeCd="LocationLookupAddr" Addr1="Smith Ranch Road" Addr2="gg" City="San Rafael" StateProvCd="CA" PostalCode="94903" RegionCd="United States" RegionISOCd="US"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-684967011-114037839" RiskGroupCd="BuildingGroup"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-165582556-2106691008" RiskGroupCd="ContentsGroup"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-1264041677-761243012" RiskGroupCd="IncomeGroup"/>
+        <DTOLocationDetail id="LocationDetail-1469294050-128997649" DetailTypeCd="CAutoLocationDetail"/>
+        <DTOLocationDetail id="LocationDetail-34300388-100584746" DetailTypeCd="CommercialPropertyLocationDetail"/>
+        <DTOLocationDetail id="LocationDetail-534005303-1913772569" DetailTypeCd="BOPLocationDetail"/>
+    </DTOLocation>
+    <DTOApplicationInfo id="ApplicationInfo-85258009-1996618531" AddDt="20210910" AddTm="15:30:07 PDT" AddUser="ezere" UpdateDt="20220127" UpdateTm="21:29:25 PST" UpdateUser="ezere"/>
+    <DTOTransactionInfo id="TransactionInfo-740632557-1352562728" TransactionCd="New Business" TransactionEffectiveDt="20210909" TransactionShortDescription="New Business" SourceCd="Innovation">
+        <ElectronicPaymentSource id="ElectronicPaymentSource-507191954-1409900356" SourceTypeCd="PremiumSource"/>
+    </DTOTransactionInfo>
+    <DTOInsured id="Insured-38715474-1646361848" IndexName="XL, Ef" EntityTypeCd="Individual" PreferredDeliveryMethod="Batch">
+        <PartyInfo id="PartyInfo-1382318181-468267313" PartyTypeCd="InsuredParty">
+            <PersonInfo id="PersonInfo-1150826556-811456646" PersonTypeCd="InsuredPersonal"/>
+            <EmailInfo id="EmailInfo-1007259881-1956096102" EmailTypeCd="InsuredEmail" EmailAddr="cg@topa.com" PreferredInd="No"/>
+            <TaxInfo id="TaxInfo-1886361314-584929639" TaxTypeCd="InsuredTaxInfo" TaxIdTypeCd="SSN"/>
+            <PhoneInfo id="PhoneInfo-1900754704-797722711" PhoneTypeCd="InsuredPhonePrimary" PreferredInd="No" PhoneName="Business"/>
+            <NameInfo id="NameInfo-1875983950-117332464" NameTypeCd="InsuredName" GivenName="Ef" Surname="XL" CommercialName="XL, Ef"/>
+            <Addr id="Addr-1020666078-1353799847" AddrTypeCd="InsuredPrimaryBusAddr" Addr1="Smith Ranch Road" Addr2="gg" City="San Rafael" StateProvCd="CA" PostalCode="94903" RegionCd="United States" RegionISOCd="US"/>
+            <PhoneInfo id="PhoneInfo-1601313687-384785543" PhoneTypeCd="InsuredPhoneSecondary" PreferredInd="No"/>
+            <PhoneInfo id="PhoneInfo-1043602173-1941382044" PhoneTypeCd="InsuredFax" PreferredInd="No"/>
+            <Addr id="Addr-1322013630-78459448" AddrTypeCd="InsuredMailingAddr" Addr1="Smith Ranch Road" City="San Rafael" StateProvCd="CA" PostalCode="94903" RegionCd="United States" RegionISOCd="US"/>
+            <Addr id="Addr-158343843-1398679370" AddrTypeCd="InsuredBillingAddr"/>
+            <Addr id="Addr-2133053244-317857298" AddrTypeCd="InsuredPriorAddr"/>
+            <Addr id="Addr-446645205-953766843" AddrTypeCd="InsuredLookupAddr"/>
+        </PartyInfo>
+        <InsuranceScore id="InsuranceScore-2036293293-388853068" InsuranceScoreTypeCd="InsuredInsuranceScore"/>
+        <PartyInfo id="PartyInfo-1499603379-1541584387" PartyTypeCd="InsuredPartyJoint">
+            <PersonInfo id="PersonInfo-26398765-1334721714" PersonTypeCd="InsuredPersonalJoint"/>
+            <TaxInfo id="TaxInfo-1779614685-197035161" TaxTypeCd="InsuredTaxInfoJoint"/>
+            <NameInfo id="NameInfo-998496065-1228214017" NameTypeCd="InsuredNameJoint"/>
+        </PartyInfo>
+        <PartyInfo id="PartyInfo-481967739-577759986" PartyTypeCd="InsuredPartyTrust">
+            <TaxInfo id="TaxInfo-1587530057-561644623" TaxTypeCd="InsuredTaxInfoTrust"/>
+        </PartyInfo>
+        <PartyInfo id="PartyInfo-1820246013-823910650" PartyTypeCd="InsuredPartyEstate">
+            <TaxInfo id="TaxInfo-300851729-1623692319" TaxTypeCd="InsuredTaxInfoEstate"/>
+        </PartyInfo>
+        <InsuranceScore id="InsuranceScore-1933028242-797748871" InsuranceScoreTypeCd="InsuredJointInsuranceScore"/>
+    </DTOInsured>
+    <Output id="Output-749552023-85133264" DocumentType="Output" OutputTemplateIdRef="New Business Declaration" AddUser="System" Status="Transaction">
+        <Tag id="Tag-1624874261-305624086" Name="Output" TagTemplateIdRef="Output"/>
+        <OutputItem id="OutputItem-1226420826-1896522036" IncludeInd="Yes" ItemName="Insured New Business Package" ItemDescription="Insured New Business Package" Name="Producer" FormCd="Full Declaration" DeliveryCd="Email" DestinationCd="jscreen@allrisks.com" DefaultInd="Yes" MailProofCd="None" CoversheetFormTemplateIdRef="Coversheet" OutputTemplateRecipientIdRef="InsuredNewBusinessPackage" DocumentTypeCd="New Business Package">
+            <PartyInfo id="PartyInfo-1552781815-1484940126" PartyTypeCd="OutputProviderParty" Code="0002-540-1014">
+                <EmailInfo id="EmailInfo-985321167-505273261" EmailTypeCd="OutputProviderEmail" EmailAddr="jscreen@allrisks.com" PreferredInd="No"/>
+                <TaxInfo id="TaxInfo-783283120-1702686120" TaxTypeCd="OutputProviderTaxInfo" LegalEntityCd="Individual"/>
+                <PhoneInfo id="PhoneInfo-165448574-2045569371" PhoneTypeCd="OutputProviderPrimaryPhone" PreferredInd="No"/>
+                <NameInfo id="NameInfo-672114597-706481825" NameTypeCd="OutputProviderName" GivenName="Jeff Screen" CommercialName="ALL RISKS LIMITED - PHOENIX" DBAName="Jeff Screen" DBAIndexName="JEFFSCREEN"/>
+                <Addr id="Addr-1207363559-1498310771" AddrTypeCd="OutputProviderBillingAddr" Addr1="11811 N. Tatum Blvd." Addr2="Suite 4010" City="Phoenix" StateProvCd="AZ" PostalCode="85028" RegionCd="United States" RegionISOCd="US"/>
+                <PhoneInfo id="PhoneInfo-212455024-1183490114" PhoneTypeCd="OutputProviderSecondaryPhone" PreferredInd="No"/>
+                <PhoneInfo id="PhoneInfo-909360811-479479278" PhoneTypeCd="OutputProviderFax" PreferredInd="No"/>
+                <Addr id="Addr-1577894466-1301799281" AddrTypeCd="OutputProviderStreetAddr" Addr1="11811 N. Tatum Blvd." Addr2="Suite 4010" City="Phoenix" StateProvCd="AZ" PostalCode="85028" RegionCd="United States" RegionISOCd="US"/>
+                <Addr id="Addr-1727715470-1484741258" AddrTypeCd="OutputProviderMailingAddr"/>
+            </PartyInfo>
+        </OutputItem>
+        <Tag id="Tag-582611062-11556257" Name="Declaration" TagTemplateIdRef="Declaration"/>
+    </Output>
+    <DTOLossHistory id="LossHistory-1088052822-1482242513" LossHistoryNumber="1" StatusCd="Deleted" SourceCd="Application" LossDt="20210908" LossAmt="123" AtFaultCd="At Fault" ClaimStatusCd="Open" DriverName="Parked" TypeCd="Vehicle"/>
+    <DTOBasicPolicy id="BasicPolicy-1114570063-1829876688" CarrierGroupCd="TIC" CarrierCd="TIC" ControllingStateCd="CA" TransactionCd="New Business" InceptionDt="20210909" InceptionTm="12:01am" EffectiveDt="20210909" EffectiveTm="12:01am" ExpirationDt="20220909" RatedInd="Yes" ProviderRef="2837" UnderwriterCd="tdavis" Commission="17.50" PayPlanCd="Agent Bill Full Pay" PolicyVersion="1" TransactionNumber="1" TransactionCommissionAmt="2533.32" RenewalTermCd="1 Year" QuoteNumber="QT-00001560" QuoteNumberLookup="QT1560" ProductVersionIdRef="topa-CA-CommercialExcess-v01-00-01" FullTermAmt="14476.00" WrittenPremiumAmt="14476.00" FinalPremiumAmt="14476.00" SubTypeCd="XL" Description="Commercial Excess Liability" WrittenFeeAmt="0.00" WrittenCommissionFeeAmt="0.00" BusinessEstDt="20100915" PolicyType="XL1" PolicyGLClassCode="45334" PolicyGLClassDesc="Insurance Agents" PolicyGLClassIndustry="Retail/Service" PolicyGLClassSubIndustry="Office" PolicyGLClassEligibility="Acceptable" OperationsDescription="xxxxx">
+        <ElectronicPaymentSource id="ElectronicPaymentSource-1340077388-931125111" SourceTypeCd="InstallmentSource"/>
+        <DTOCommissionArea id="CommissionArea-284609110-2023429288" CommissionAreaCd="ExcessLiability" CommissionPct="17.50" ContributionPct="0.00" FinalCommissionPct="17.50" FinalPremiumAmt="14476.00" FullTermAmt="14476.00" CommissionAmt="0.00" TransactionCommissionAmt="2533.32" FinalFeeAmt="0.00" FullTermFeeAmt="0.00"/>
+    </DTOBasicPolicy>
+    <DTOTabsVisited id="TabsVisited-2101593156-1625030755">
+        <DTOTabVisited id="TabVisited-333840837-649015549" TabName="Policy" VisitedOnQuoteInd="true"/>
+        <DTOTabVisited id="TabVisited-331155965-919007235" TabName="UmbrellaLiability" VisitedOnQuoteInd="true"/>
+        <DTOTabVisited id="TabVisited-1487128920-1515401705" TabName="LossHistory" VisitedOnQuoteInd="true"/>
+        <DTOTabVisited id="TabVisited-1375258155-1700433158" TabName="Underwriting" VisitedOnQuoteInd="true"/>
+        <DTOTabVisited id="TabVisited-1989861764-987479242" TabName="Commission" VisitedOnQuoteInd="true"/>
+        <DTOTabVisited id="TabVisited-553173847-233782941" TabName="Info" VisitedOnQuoteInd="true"/>
+        <DTOTabVisited id="TabVisited-1055147325-846465346" TabName="Worksheets" VisitedOnQuoteInd="true"/>
+        <DTOTabVisited id="TabVisited-1139272632-984503137" TabName="Review" VisitedOnQuoteInd="true"/>
+    </DTOTabsVisited>
+    <ValidationError id="ValidationError-1749165091-699513218" TypeCd="Validation-Addr-1322013630-78459448" Msg="Please double check to make sure that [mailing] address is correct - " SubTypeCd="WARNING" PermanentInd="Yes" Link="&lt;a class='actionLink' href=javascript:prepareReplyXml();cmmXFormSafe('UWApplicationSync','2487','Line-1240186931-426901313','Line-1240186931-426901313','CodeRefOptionsKey=application-product&amp;TabOption=Policy&amp;ShowRequiredFieldsInd=Yes&amp;HighlightFields=InsuredMailingAddr.Addr1')&gt;Go There Now&lt;/a&gt;"/>
+    <DTOLocation id="Location-685693893-2115001970" LocationNumber="2" Status="Deleted" UnderlyingCarrierName="xvxvx" UnderlyingPolicyTypeCd="Professional Liability" UnderlyingPolicyNumber="GL 009897" UnderlyingPolicyEffectiveDt="20210909" UnderlyingPolicyExpirationDt="20220909" UnderlyingAmBestRating="A+" UnderlyingBestFinancialSizeCategory="IV" UnderlyingAggregateLimit="1000000" UnderlyingEachClaimLimit="1000000" LocationCounterNumber="2" UnderlyingPolicyInd="No">
+        <DTOLocationDetail id="LocationDetail-1747880398-672791153" DetailTypeCd="ProtectionClassLocationDetail"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-415888899-1993887335" RiskGroupCd="ReinsuranceGroup"/>
+        <Addr id="Addr-652529374-983211177" AddrTypeCd="LocationAddr" Addr1="Smith Ranch Road" Addr2="gg" City="San Rafael" StateProvCd="CA" PostalCode="94903" RegionCd="United States" RegionISOCd="US"/>
+        <Addr id="Addr-1690597580-408635880" AddrTypeCd="LocationLookupAddr" Addr1="Smith Ranch Road" Addr2="gg" City="San Rafael" StateProvCd="CA" PostalCode="94903" RegionCd="United States" RegionISOCd="US"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-824003176-1934315946" RiskGroupCd="BuildingGroup"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-619038766-276431267" RiskGroupCd="ContentsGroup"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-1273976782-1644206360" RiskGroupCd="IncomeGroup"/>
+        <DTOLocationDetail id="LocationDetail-427399579-2144803829" DetailTypeCd="CAutoLocationDetail"/>
+        <DTOLocationDetail id="LocationDetail-1663802680-75901278" DetailTypeCd="CommercialPropertyLocationDetail"/>
+        <DTOLocationDetail id="LocationDetail-97122981-1231894026" DetailTypeCd="BOPLocationDetail"/>
+    </DTOLocation>
+    <DTOLocation id="Location-718978891-1519734569" LocationNumber="3" Status="Active" UnderlyingCarrierName="hgj" UnderlyingPolicyTypeCd="General/Business Liability" UnderlyingPolicyNumber="GL 00943" UnderlyingPolicyEffectiveDt="20210909" UnderlyingPolicyExpirationDt="20220909" UnderlyingAmBestRating="A" UnderlyingBestFinancialSizeCategory="III" UnderlyingPremium="34654" UnderlyingEachOccurrenceLimit="1000000" UnderlyingProductsAndCompletedOpsAggregateLimit="1000000" UnderlyingGeneralAggregateLimit="1000000" UnderlyingPersonalAndAdvertisingInjuryLimit="1000000" UnderlyingQuestionClaimsMadePolicy="Yes" UnderlyingQuestion2RetroactiveDt="20210907" UnderlyingQuestion3UninterruptedClaims="No" UnderlyingQuestion4DefenseCost="No" LocationCounterNumber="2" UnderlyingPolicyInd="No">
+        <DTOLocationDetail id="LocationDetail-1486154193-391975661" DetailTypeCd="ProtectionClassLocationDetail"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-1626902615-1113301622" RiskGroupCd="ReinsuranceGroup"/>
+        <Addr id="Addr-919752206-1270687633" AddrTypeCd="LocationAddr" Addr1="Smith Ranch Road" Addr2="gg" City="San Rafael" StateProvCd="CA" PostalCode="94903" RegionCd="United States" RegionISOCd="US"/>
+        <Addr id="Addr-887290186-1157498104" AddrTypeCd="LocationLookupAddr" Addr1="Smith Ranch Road" Addr2="gg" City="San Rafael" StateProvCd="CA" PostalCode="94903" RegionCd="United States" RegionISOCd="US"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-1641036766-1438460632" RiskGroupCd="BuildingGroup"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-1910727184-1857300040" RiskGroupCd="ContentsGroup"/>
+        <DTOLocationRiskGroup id="LocationRiskGroup-240844427-848166514" RiskGroupCd="IncomeGroup"/>
+        <DTOLocationDetail id="LocationDetail-1311377451-319361522" DetailTypeCd="CAutoLocationDetail"/>
+        <DTOLocationDetail id="LocationDetail-1823254563-320410913" DetailTypeCd="CommercialPropertyLocationDetail"/>
+        <DTOLocationDetail id="LocationDetail-56935998-957091940" DetailTypeCd="BOPLocationDetail"/>
+    </DTOLocation>
+</DTOApplication>
