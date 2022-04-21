@@ -1,0 +1,91 @@
+Break the xpr logic :
+
+-----------------------------------------------------------
+
+update the DTOCoverage =>  @CoverageCd=\'CEL\'
+
+iterate over the Layer in domDRC payload and update the DTOSteps of DTOCoverage and DTORateArea in dom payload  :
+
+update the DTOSteps 
+
+=>	if "InclFlag") == 'Y'           // if the value of InclFlag in Layer is 'Y' in domDRC payload
+	=>	if ("LayerPremNonAuto") > 0)  // NonAuto Layer
+		
+			NonAuto
+			add dtostep in CEL DTOCoverage in dom payload based on the condition (if the "InclFlag" == 'Y' in domDRC payload) and add DTOStep for 1m to 7m
+      Example :
+      
+      <DTOSteps> // add dtostep in CEL DTOCoverage in dom payload based on the condition (if the "InclFlag" == 'Y' in domDRC payload)
+                <DTOStep Order="1" Name="Rate Area: 1M NonAuto" Desc="1M NonAuto Layer Premium" Operation="+" Factor="7277" Value="7277"/>
+                <DTOStep Order="2" Name="Rate Area: 2M NonAuto" Desc="2M NonAuto Layer Premium" Operation="+" Factor="2674" Value="2674"/>
+                <DTOStep Order="3" Name="Rate Area: 3M NonAuto" Desc="3M NonAuto Layer Premium" Operation="+" Factor="1528" Value="1528"/>
+                <DTOStep Order="4" Name="Rate Area: 4M NonAuto" Desc="4M NonAuto Layer Premium" Operation="+" Factor="917" Value="917"/>
+                <DTOStep Order="5" Name="Rate Area: 5M NonAuto" Desc="5M NonAuto Layer Premium" Operation="+" Factor="750" Value="750"/>
+                <DTOStep Order="6" Name="Rate Area: 6M NonAuto" Desc="6M NonAuto Layer Premium" Operation="+" Factor="665" Value="665"/>
+                <DTOStep Order="7" Name="Rate Area: 7M NonAuto" Desc="7M NonAuto Layer Premium" Operation="+" Factor="665" Value="665"/>
+            </DTOSteps>
+			
+			=> update the DTORateArea (AreaName, Description, FullTermAmt, FinalPremiumAmt, WrittenPremiumAmt)
+			=> update the DTOStep of DTORateArea
+				
+						Example for DTORateArea 2m layer update :
+            
+<DTORateArea AreaName="2M NonAuto" Description="2M NonAuto Layer" FullTermAmt="2674" FinalPremiumAmt="2674" WrittenPremiumAmt="2674">
+    <DTOSteps>
+        <DTOStep Order="1" Name="1M Premium" Desc="1M Final Premium" Operation="=" Factor="7277" Value="7277"/>
+        <DTOStep Order="2" Name="Final Layer Factor" Desc="Final Layer Factor" Operation="x" Factor="0.3675" Value="2674">
+            <DTOSteps>
+                <DTOStep Order="1" Name="Default Layer Factor" Desc="Default Layer Factor" Operation="" Factor="0.3675" Value=""/>
+                <DTOStep Order="2" Name="Layer Modification Factor" Desc="Layer Modification Factor" Operation="x" Factor="1" Value="0.368"/>
+                <DTOStep Order="3" Name="Min Layer Factor" Desc="Min Layer Factor" Operation="" Factor="0.35" Value=""/>
+                <DTOStep Order="4" Name="Max Layer Factor" Desc="Max Layer Factor" Operation="" Factor="0.65" Value=""/>
+                <DTOStep Order="5" Name="Revised Layer Factor" Desc="Revised Layer Factor" Operation="=" Factor="0.3675" Value="0.3675"/>
+            </DTOSteps>
+        </DTOStep>
+        <DTOStep Order="3" Name="Layer Minimum" Desc="2M Layer Minimum" Operation="" Factor="1000" Value=""/>
+        <DTOStep Order="4" Name="Balance To Minimum" Desc="Balance To Layer Minimum" Operation="+" Factor="0" Value="2674"/>
+        <DTOStep Order="5" Name="NonAuto Ratio Factor" Desc="NonAuto Ratio Factor" Operation="x" Factor="1" Value="2674"/>
+    </DTOSteps>
+</DTORateArea>
+
+-----------------------------------------------------------
+
+Auto
+
+=>	if ("LayerPremNonAuto") > 0)  // NonAuto Layer
+			add DTOStep for 1m to 7m 
+			
+			and update the DTORateArea (AreaName, Description, FullTermAmt, FinalPremiumAmt, WrittenPremiumAmt)
+				
+				update the DTOStep 
+				
+						Example :
+						<DTOSteps> // add dtostep in CEL DTOCoverage in dom payload based on the condition (if the "InclFlag" == 'Y' in domDRC payload)
+                <DTOStep Order="1" Name="Rate Area: 1M NonAuto" Desc="1M NonAuto Layer Premium" Operation="+" Factor="7277" Value="7277"/>
+                <DTOStep Order="2" Name="Rate Area: 2M NonAuto" Desc="2M NonAuto Layer Premium" Operation="+" Factor="2674" Value="2674"/>
+                <DTOStep Order="3" Name="Rate Area: 3M NonAuto" Desc="3M NonAuto Layer Premium" Operation="+" Factor="1528" Value="1528"/>
+                <DTOStep Order="4" Name="Rate Area: 4M NonAuto" Desc="4M NonAuto Layer Premium" Operation="+" Factor="917" Value="917"/>
+                <DTOStep Order="5" Name="Rate Area: 5M NonAuto" Desc="5M NonAuto Layer Premium" Operation="+" Factor="750" Value="750"/>
+                <DTOStep Order="6" Name="Rate Area: 6M NonAuto" Desc="6M NonAuto Layer Premium" Operation="+" Factor="665" Value="665"/>
+                <DTOStep Order="7" Name="Rate Area: 7M NonAuto" Desc="7M NonAuto Layer Premium" Operation="+" Factor="665" Value="665"/>
+            </DTOSteps>
+						 
+<DTORateArea AreaName="2M NonAuto" Description="2M NonAuto Layer" FullTermAmt="2674" FinalPremiumAmt="2674" WrittenPremiumAmt="2674">
+    <DTOSteps>
+        <DTOStep Order="1" Name="1M Premium" Desc="1M Final Premium" Operation="=" Factor="7277" Value="7277"/>
+        <DTOStep Order="2" Name="Final Layer Factor" Desc="Final Layer Factor" Operation="x" Factor="0.3675" Value="2674">
+            <DTOSteps>
+                <DTOStep Order="1" Name="Default Layer Factor" Desc="Default Layer Factor" Operation="" Factor="0.3675" Value=""/>
+                <DTOStep Order="2" Name="Layer Modification Factor" Desc="Layer Modification Factor" Operation="x" Factor="1" Value="0.368"/>
+                <DTOStep Order="3" Name="Min Layer Factor" Desc="Min Layer Factor" Operation="" Factor="0.35" Value=""/>
+                <DTOStep Order="4" Name="Max Layer Factor" Desc="Max Layer Factor" Operation="" Factor="0.65" Value=""/>
+                <DTOStep Order="5" Name="Revised Layer Factor" Desc="Revised Layer Factor" Operation="=" Factor="0.3675" Value="0.3675"/>
+            </DTOSteps>
+        </DTOStep>
+        <DTOStep Order="3" Name="Layer Minimum" Desc="2M Layer Minimum" Operation="" Factor="1000" Value=""/>
+        <DTOStep Order="4" Name="Balance To Minimum" Desc="Balance To Layer Minimum" Operation="+" Factor="0" Value="2674"/>
+        <DTOStep Order="5" Name="NonAuto Ratio Factor" Desc="NonAuto Ratio Factor" Operation="x" Factor="1" Value="2674"/>
+    </DTOSteps>
+</DTORateArea>
+
+-----------------------------------------------------------
