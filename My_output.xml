@@ -1,0 +1,17 @@
+<DTOApplication>
+	<DTOCoverage id="Coverage-2052015390-1539745699" Status="Active" CoverageCd="TRIA" FullTermAmt="0.00" WrittenPremiumAmt="0.00" FinalPremiumAmt="0.00" EarnedAmt="0.00" CommissionPct="17.50" ContributionPct="0.00" CommissionAmt="0.00" TransactionCommissionAmt="0.00" Description="TRIA" CoinsurancePct="0">
+		<DTOSteps>
+			<DTOStep Order="1" Name="Rate Area: 1M TRIA" Desc="1M TRIA Layer Premium" Operation="+" Factor="27" Value="27"/>
+		</DTOSteps>
+		<DTORateArea id="RateArea-501620463-353024671" AreaName="1M TRIA" Description="1M TRIA Layer" FullTermAmt="0.00" FinalPremiumAmt="0.00" WrittenPremiumAmt="0.00" CommissionAmt="0.00" TransactionCommissionAmt="0.00" Status="Cleared">
+		  <DTOSteps>
+			  <DTOStep Order="1" Name="Rate Area: 1M TRIA" Desc="1M TRIA Layer Premium" Operation="+" Factor="27" Value="27"/>
+		  </DTOSteps>
+    </DTORateArea>
+		<DTORateArea id="RateArea-1618399947-1871852277" AreaName="2M TRIA" Description="2M TRIA Layer" FullTermAmt="0.00" FinalPremiumAmt="0.00" WrittenPremiumAmt="0.00" CommissionAmt="0.00" TransactionCommissionAmt="0.00" Status="Cleared">
+		  <DTOSteps>
+			  <DTOStep Order="1" Name="Rate Area: 1M TRIA" Desc="1M TRIA Layer Premium" Operation="+" Factor="27" Value="27"/>
+		  </DTOSteps>
+		</DTORateArea>
+	</DTOCoverage>
+</DTOApplication>
